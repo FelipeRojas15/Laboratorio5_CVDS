@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 2118887
  */
-@WebServlet(urlPatterns = {"/helloServlet"})
+@WebServlet(
+        urlPatterns = "/helloServlet"
+)
 public class SampleServlet extends HttpServlet{
     static final long serialVersionUID = 35L;
 
