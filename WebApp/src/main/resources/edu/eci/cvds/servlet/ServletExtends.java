@@ -35,6 +35,10 @@ public class ServletExtends extends HttpServlet{
        responseWriter.write(Service.todosToHTMLTable(todos));
        }catch(java.lang.NumberFormatException e){
         responseWriter.write("requerimiento inválido");
+       }catch(java.net.MalformedURLException e){
+        responseWriter.write("error interno en el servidor");
+       }catch(Exception e ){
+        responseWriter.write("requerimiento inválido");
        }
        
        resp.setStatus(HttpServletResponse.SC_OK);
