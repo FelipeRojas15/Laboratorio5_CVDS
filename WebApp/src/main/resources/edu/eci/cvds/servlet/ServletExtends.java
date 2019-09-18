@@ -45,4 +45,28 @@ public class ServletExtends extends HttpServlet{
        
        responseWriter.flush();
     }
+    @Override    
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       Writer responseWriter = resp.getWriter();
+       try{
+       Optional<String> optName = Optional.ofNullable(req.getParameter("id"));
+       String id = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
+       int ide = Integer.parseInt(id);
+       Todo all = Service.getTodo(ide);
+       ArrayList<Todo> todos = new ArrayList<Todo>();
+       todos.add(all);
+       responseWriter.write(Service.todosToHTMLTable(todos));
+       }catch(java.lang.NumberFormatException e){
+        responseWriter.write("requerimiento inválido");
+       }catch(java.net.MalformedURLException e){
+        responseWriter.write("error interno en el servidor");
+       }catch(Exception e ){
+        responseWriter.write("requerimiento inválido");
+       }
+       
+       resp.setStatus(HttpServletResponse.SC_OK);
+       
+       responseWriter.flush();
+    }
+    
 }

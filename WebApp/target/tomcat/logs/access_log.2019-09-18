@@ -11,3 +11,6 @@
 0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:00:40 -0500] "GET / HTTP/1.1" 200 57 http-bio-8080-exec-9 630
 0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:00:47 -0500] "GET /elServletPleno HTTP/1.1" 200 33 http-bio-8080-exec-9 1
 0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:01:08 -0500] "GET /elServletPleno?id=3 HTTP/1.1" 200 165 http-bio-8080-exec-9 277
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:44:13 -0500] "GET /elServletPleno?id=bashsadh HTTP/1.1" 200 33 http-bio-8080-exec-1 28
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:44:21 -0500] "GET /elServletPleno?id=7 HTTP/1.1" 200 179 http-bio-8080-exec-3 1389
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:14:55:34 -0500] "GET /index.html HTTP/1.1" 200 217 http-bio-8080-exec-1 26
